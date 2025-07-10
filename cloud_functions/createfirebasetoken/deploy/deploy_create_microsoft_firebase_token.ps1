@@ -6,4 +6,4 @@ gcloud functions deploy create_microsoft_firebase_token `
   --entry-point=CreateMicrosoftFirebaseToken `
   --trigger-http `
   --allow-unauthenticated `
-  --env-vars-file "env.yaml"
+  --env-vars-file "../../../../createfirebasetoken_env/env.yaml"

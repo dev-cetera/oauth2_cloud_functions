@@ -6,4 +6,4 @@ gcloud functions deploy create_x_twitter_firebase_token `
   --entry-point=CreateXTwitterFirebaseToken `
   --trigger-http `
   --allow-unauthenticated `
-  --env-vars-file "env.yaml"
+  --env-vars-file "../../../../createfirebasetoken_env/env.yaml"

@@ -6,4 +6,4 @@ gcloud functions deploy create_github_firebase_token `
   --entry-point=CreateGitHubFirebaseToken `
   --trigger-http `
   --allow-unauthenticated `
-  --env-vars-file "env.yaml"
+  --env-vars-file "../../../../createfirebasetoken_env/env.yaml"

@@ -5,4 +5,4 @@ gcloud functions deploy exchange_auth_code `
   --entry-point=ExchangeAuthCode `
   --trigger-http `
   --allow-unauthenticated `
-  --env-vars-file "env.yaml"
+  --env-vars-file "../../../exchangeauthcode_env/env.yaml"

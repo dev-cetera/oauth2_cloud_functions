@@ -6,4 +6,4 @@ gcloud functions deploy create_tiktok_firebase_token `
   --entry-point=CreateTikTokFirebaseToken `
   --trigger-http `
   --allow-unauthenticated `
-  --env-vars-file "env.yaml"
+  --env-vars-file "../../../../createfirebasetoken_env/env.yaml"

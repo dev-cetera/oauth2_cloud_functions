@@ -6,4 +6,4 @@ gcloud functions deploy create_facebook_firebase_token `
   --entry-point=CreateFacebookFirebaseToken `
   --trigger-http `
   --allow-unauthenticated `
-  --env-vars-file "env.yaml"
+  --env-vars-file "../../../../createfirebasetoken_env/env.yaml"
