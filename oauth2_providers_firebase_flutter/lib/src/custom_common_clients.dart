@@ -10,16 +10,16 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-import 'custom_token_provider.dart';
+import 'custom_token_client.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 /// Implements the custom token sign-in flow for Google.
-final class CustomGoogleAuthProvider extends CustomTokenProvider {
+final class CustomGoogleAuthClient extends CustomTokenClient {
   @override
   final Uri customTokenEndpoint;
 
-  const CustomGoogleAuthProvider({
+  const CustomGoogleAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
@@ -41,11 +41,11 @@ final class CustomGoogleAuthProvider extends CustomTokenProvider {
 }
 
 /// Implements the custom token sign-in flow for GitHub.
-final class CustomGitHubAuthProvider extends CustomTokenProvider {
+final class CustomGitHubAuthClient extends CustomTokenClient {
   @override
   final Uri customTokenEndpoint;
 
-  const CustomGitHubAuthProvider({
+  const CustomGitHubAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
@@ -66,11 +66,11 @@ final class CustomGitHubAuthProvider extends CustomTokenProvider {
 }
 
 /// Implements the custom token sign-in flow for Facebook.
-final class CustomFacebookAuthProvider extends CustomTokenProvider {
+final class CustomFacebookAuthClient extends CustomTokenClient {
   @override
   final Uri customTokenEndpoint;
 
-  const CustomFacebookAuthProvider({
+  const CustomFacebookAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
@@ -92,11 +92,11 @@ final class CustomFacebookAuthProvider extends CustomTokenProvider {
 }
 
 /// Implements the custom token sign-in flow for Microsoft.
-final class CustomMicrosoftAuthProvider extends CustomTokenProvider {
+final class CustomMicrosoftAuthClient extends CustomTokenClient {
   @override
   final Uri customTokenEndpoint;
 
-  const CustomMicrosoftAuthProvider({
+  const CustomMicrosoftAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
@@ -119,11 +119,11 @@ final class CustomMicrosoftAuthProvider extends CustomTokenProvider {
 }
 
 /// Implements the custom token sign-in flow for X (Twitter).
-final class CustomXTwitterAuthProvider extends CustomTokenProvider {
+final class CustomXTwitterAuthClient extends CustomTokenClient {
   @override
   final Uri customTokenEndpoint;
 
-  const CustomXTwitterAuthProvider({
+  const CustomXTwitterAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
@@ -147,11 +147,11 @@ final class CustomXTwitterAuthProvider extends CustomTokenProvider {
 }
 
 /// Implements the custom token sign-in flow for LinkedIn.
-final class CustomLinkedInAuthProvider extends CustomTokenProvider {
+final class CustomLinkedInAuthClient extends CustomTokenClient {
   @override
   final Uri customTokenEndpoint;
 
-  const CustomLinkedInAuthProvider({
+  const CustomLinkedInAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
@@ -173,11 +173,11 @@ final class CustomLinkedInAuthProvider extends CustomTokenProvider {
 }
 
 /// Implements the custom token sign-in flow for TikTok.
-final class CustomTikTokAuthProvider extends CustomTokenProvider {
+final class CustomTikTokAuthClient extends CustomTokenClient {
   @override
   final Uri customTokenEndpoint;
 
-  const CustomTikTokAuthProvider({
+  const CustomTikTokAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
@@ -199,11 +199,11 @@ final class CustomTikTokAuthProvider extends CustomTokenProvider {
 }
 
 /// Implements the custom token sign-in flow for Instagram.
-final class CustomInstagramAuthProvider extends CustomTokenProvider {
+final class CustomInstagramAuthClient extends CustomTokenClient {
   @override
   final Uri customTokenEndpoint;
 
-  const CustomInstagramAuthProvider({
+  const CustomInstagramAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,

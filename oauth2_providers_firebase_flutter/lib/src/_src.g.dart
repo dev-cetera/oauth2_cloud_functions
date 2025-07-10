@@ -7,7 +7,7 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-export './common_providers.dart';
-export 'custom_common_providers.dart';
-export './custom_token_provider.dart';
-export './oauth2_provider.dart';
+export 'common_clients.dart';
+export 'custom_common_clients.dart';
+export 'custom_token_client.dart';
+export 'oauth2_client.dart';

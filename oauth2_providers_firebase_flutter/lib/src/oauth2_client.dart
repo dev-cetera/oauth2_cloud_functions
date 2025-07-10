@@ -21,9 +21,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-/// An abstract base class for implementing OAuth 2.0 authentication providers
+/// An abstract base class for implementing OAuth 2.0 authentication clients
 /// that can sign into Firebase.
-abstract base class OAuth2Provider {
+abstract base class OAuth2Client {
   /// The URL of the backend service that will exchange the authorization code
   /// for an access token.
   final Uri backendUrl;
@@ -45,7 +45,7 @@ abstract base class OAuth2Provider {
   /// Should only be used in secure server environments, not in public clients.
   final String? clientSecret;
 
-  const OAuth2Provider({
+  const OAuth2Client({
     required this.backendUrl,
     required this.clientId,
     this.redirectUri,

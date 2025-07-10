@@ -12,13 +12,13 @@
 
 import 'package:firebase_auth/firebase_auth.dart' show AuthCredential, OAuthCredential;
 
-import 'oauth2_provider.dart';
+import 'oauth2_client.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 /// Implements the sign-in flow for Google using a standard Firebase OAuth credential.
-final class GoogleAuthProvider extends OAuth2Provider {
-  const GoogleAuthProvider({
+final class GoogleAuthClient extends OAuth2Client {
+  const GoogleAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
@@ -54,8 +54,8 @@ final class GoogleAuthProvider extends OAuth2Provider {
 }
 
 /// Implements the sign-in flow for GitHub using a standard Firebase OAuth credential.
-final class GitHubAuthProvider extends OAuth2Provider {
-  const GitHubAuthProvider({
+final class GitHubAuthClient extends OAuth2Client {
+  const GitHubAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
@@ -88,8 +88,8 @@ final class GitHubAuthProvider extends OAuth2Provider {
 }
 
 /// Implements the sign-in flow for Facebook using a standard Firebase OAuth credential.
-final class FacebookAuthProvider extends OAuth2Provider {
-  const FacebookAuthProvider({
+final class FacebookAuthClient extends OAuth2Client {
+  const FacebookAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
@@ -123,8 +123,8 @@ final class FacebookAuthProvider extends OAuth2Provider {
 }
 
 /// Implements the sign-in flow for Microsoft using a standard Firebase OAuth credential.
-final class MicrosoftAuthProvider extends OAuth2Provider {
-  const MicrosoftAuthProvider({
+final class MicrosoftAuthClient extends OAuth2Client {
+  const MicrosoftAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
@@ -173,8 +173,8 @@ final class MicrosoftAuthProvider extends OAuth2Provider {
 
 /// Implements the sign-in flow for X (Twitter) using a standard Firebase OAuth credential.
 /// It enables PKCE as required by the X API.
-final class XTwitterAuthProvider extends OAuth2Provider {
-  const XTwitterAuthProvider({
+final class XTwitterAuthClient extends OAuth2Client {
+  const XTwitterAuthClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,

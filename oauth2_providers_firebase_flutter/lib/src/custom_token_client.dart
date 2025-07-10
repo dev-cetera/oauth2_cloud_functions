@@ -14,13 +14,13 @@ import 'dart:convert' show jsonEncode, jsonDecode;
 import 'package:firebase_auth/firebase_auth.dart' show AuthCredential, FirebaseAuth;
 import 'package:http/http.dart' as http;
 
-import 'oauth2_provider.dart';
+import 'oauth2_client.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 /// An abstract provider for a multi-step custom token authentication flow.
-abstract base class CustomTokenProvider extends OAuth2Provider {
-  const CustomTokenProvider({
+abstract base class CustomTokenClient extends OAuth2Client {
+  const CustomTokenClient({
     required super.backendUrl,
     required super.clientId,
     super.redirectUri,
