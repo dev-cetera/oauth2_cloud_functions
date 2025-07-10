@@ -135,13 +135,26 @@ final class MicrosoftAuthProvider extends OAuth2Provider {
   @override
   AuthCredential createFirebaseCredential(Map<String, dynamic> tokenData) {
     final accessToken = tokenData['access_token'] as String?;
+
     if (accessToken == null) {
       throw Exception('Microsoft token response did not include an access_token.');
     }
+
+    final idToken = tokenData['id_token'] as String?;
+
+    if (idToken == null) {
+      throw Exception(
+        'Microsoft token response did not include an id_token. Ensure "openid" scope is requested.',
+      );
+    }
+
+    print('DEBUG: Sending this body to backend: $tokenData');
+
     return OAuthCredential(
       providerId: 'microsoft.com',
       signInMethod: 'microsoft.com',
       accessToken: accessToken,
+      idToken: idToken,
     );
   }
 

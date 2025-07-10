@@ -20,7 +20,7 @@ type XUserInfo struct {
 	ProfileImageURL string `json:"profile_image_url"`
 }
 
-func CreateXFirebaseToken(w http.ResponseWriter, r *http.Request) {
+func CreateXTwitterFirebaseToken(w http.ResponseWriter, r *http.Request) {
 	setCorsHeaders(w, r)
 	if r.Method == http.MethodOptions {
 		w.WriteHeader(http.StatusNoContent)

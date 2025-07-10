@@ -13,7 +13,6 @@ type InputData struct {
 	Code         *string `json:"code,omitempty"`
 	RedirectURI  *string `json:"redirect_uri,omitempty"`
 	ClientID     *string `json:"client_id,omitempty"`
-	ClientSecret *string `json:"client_secret,omitempty"`
 	CodeVerifier *string `json:"code_verifier,omitempty"`
 }
 
@@ -22,7 +21,7 @@ type FinalInputData struct {
 	RedirectURI  string
 	ClientID     string
 	ClientSecret string
-	CodeVerifier string
+	CodeVerifier *string
 }
 
 func setCorsHeaders(w http.ResponseWriter, r *http.Request) {
@@ -68,16 +67,10 @@ func exchangeCode(w http.ResponseWriter, r *http.Request, provider, tokenURL str
 		finalClientID = envID
 	}
 
-	finalClientSecret := ""
-	if reqBody.ClientSecret != nil {
-		finalClientSecret = *reqBody.ClientSecret
-	} else {
-		finalClientSecret = envSecret
-	}
-
 	finalData := FinalInputData{
 		ClientID:     finalClientID,
-		ClientSecret: finalClientSecret,
+		ClientSecret: envSecret,
+		CodeVerifier: reqBody.CodeVerifier,
 	}
 
 	if reqBody.Code != nil {
@@ -86,10 +79,6 @@ func exchangeCode(w http.ResponseWriter, r *http.Request, provider, tokenURL str
 
 	if reqBody.RedirectURI != nil {
 		finalData.RedirectURI = *reqBody.RedirectURI
-	}
-
-	if reqBody.CodeVerifier != nil {
-		finalData.CodeVerifier = *reqBody.CodeVerifier
 	}
 
 	if finalData.Code == "" {

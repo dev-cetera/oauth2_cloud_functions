@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authentication Complete</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 24px;
+            color: white;
+            background-color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333333;
+        }
+    </style>
 </head>
+
 <body>
-    <p>Authentication is complete. This window will close automatically.</p>
-    <p>If it does not, please close the window.</p>
+    <p>Authentication complete. This window should close.</p>
+    <p>If it doesn't, click below.</p>
+    <button onclick="closeWindow()">Close</button>
     <script>
         function postAuthenticationMessage() {
-            const message = {
-                'flutter-web-auth-2': window.location.href
-            };
+            const message = { 'flutter-web-auth-2': window.location.href };
             const targetOrigin = window.location.origin;
             if (window.opener) {
                 window.opener.postMessage(message, targetOrigin);
                 window.close();
-            }
-            else if (window.parent && window.parent !== window) {
+            } else if (window.parent && window.parent !== window) {
                 window.parent.postMessage(message, targetOrigin);
-            }
-            else {
+            } else {
                 localStorage.setItem('flutter-web-auth-2', window.location.href);
                 window.close();
             }
         }
+
+        function closeWindow() {
+            window.close();
+        }
+
         postAuthenticationMessage();
     </script>
 </body>
+
 </html>
