@@ -1,0 +1,42 @@
+##.title
+## ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+##
+## Source code by dev-cetera.com & contributors. The use of this source code is
+## governed by an MIT-style license described in the LICENSE file located in
+## this project's root directory.
+##
+## See: https://opensource.org/license/mit
+##
+## ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+##.title~
+
+name: oauth2_providers_firebase_flutter
+publish_to: none
+description: Common OAuth2 provider classes for Flutter using Firebase.
+topics:
+  - firebase
+  - oauth2
+  - authentication
+  - tiktok
+  - instagram
+
+## -----------------------------------------------------------------------------
+
+environment:
+  sdk: ^3.8.1
+
+## -----------------------------------------------------------------------------
+
+dependencies:
+  flutter:
+    sdk: flutter
+  crypto: ^3.0.6
+  meta: ^1.17.0
+  firebase_auth: ^5.6.2
+  flutter_web_auth_2: ^4.1.0
+  http: ^1.4.0
+
+## -----------------------------------------------------------------------------
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
